@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日历</title>
+    <link rel="shortcut icon" href="http://favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+</head>
+<body>
+    <div class="page-group">
+      <div class="page page-current" id="page1">
+          <header class="bar bar nav">
+            <h1 class="title">日历</h1>
+          </header>
+      <div class="content navtive-scroll">
+          <div class="content-block">
+            <div class="list-block">
+               <ul>
+                   <li>
+                       <div class="item-content">
+                        <div class="item-inner">
+                         <div class=>
+
+                         </div>
+
+                        </div>
+
+                       </div>
+                   </li>
+               </ul>
+            </div>
+          </div>
+
+      </div>
+      </div>
+    </div>
+    <script src="https://docs-demos/js/calendar.js"></script>
+    <input type="text" data-toggle="date" id="#my-input">
+</body>
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script>
+    $('click','#my-input').calendar({
+        value:['2018-07-20']
+    });
+</script>
+</html>

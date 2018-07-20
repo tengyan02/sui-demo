@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>全局配置</title>
+    <script>
+        //打开自动初始化页面的功能
+        //建议不要打开自动初始化，而是调用$init方法完成初始化
+        $.config = {
+            autoInit:true
+        }
+    </script>
+    <script src="sm.min.js"></script>
+</head>
+<body>
+    <p>我们提供一些全局的配置，在初始化之前通过这些配置改变一些默认的行为
+        在引入$.config变量来改变默认配置：
+    </p>
+</body>
+</html>

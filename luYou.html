@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>路由</title>
+</head>
+<body>
+    <p>router默认开启，会自动拦截所有链接的Touch行为，如果希望一个链接走浏览器原生跳转而不使用
+        router，可以在链接上增加class=“external”挥着或者自定义属性，如
+    </p>
+    <div class="page-group">
+    </div>
+    <p>内联页面</p>
+    <div class="page page-current" id="router">
+        <header class="bar bar-nav">
+            <h1 class="title">路由</h1>
+        </header>
+        <div class="content">
+            <div class="content-block">
+                <ul>
+                    
+                        <li><a href="#">ajax加载新页面</a></li>
+                        <li><a href="#">内联的新页面</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="page" id="router3">
+        <head class="bar bar-nav">
+            <a class="button button-link button-nav pill-left back" href="#"><span class="icon icon-left"></span>返回</a>
+            <h1 class="title">路由</h1>
+        </head>
+        <div class="content">
+            <div class="content-block">
+                这是内联编写的页面，点击左上角的<a href="#" class="back">返回</a>按钮返回上一页。
+            </div>
+
+        </div>
+
+    </div>
+    <h1>后退</h1>
+    <p>对后退操作进行封装，只需要在任意的链接上增加一个.back类，点击就会自动返回到上一页</p>
+    <h1>缓存</h1>
+    <p>只要页面没有刷新，再次进入该页面时，都会优先读取缓存而不发送网络请求，如果需要强制请求
+        可以有两种方式
+    </p>
+    <ul>
+        <li>在a链接上添加data-no-cache="true属性来表明该链接点击时不使用缓存"</li>
+        <li>使用js方法load来加载时，把可选的参数ignoreCache设为true</li>
+        <p>如$router.load('detail',true)</p>
+    </ul>
+    <p>从一个页面准备开始加载，到执行加载玩加载动画，会按顺序触发一下事件：
+    </p>
+    <table>
+        <tr>
+            <td>pageLoadStart</td>
+            <td>在发送Ajax之前触发</td>
+        </tr>
+       
+        <tr>
+                <td>pageLoadCanel</td>
+                 <td>取消正在发送的ajax请求</td>
+             </tr>
+             <tr>
+                    <td>pageLoadError</td>
+                     <td>ajax请求失败</td>
+            </tr>
+            <tr>
+                    <td>pageLoadComplete</td>
+                     <td>取消正在发送的ajax请求</td>
+                 </tr>
+    </table>
+</body>
+</html>

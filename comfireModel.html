@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ConfrieModel</title>
+    <link rel="shortcut icon" href="http://favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+</head>
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">confirm</h1>
+    </header>
+    <div class="content">
+        <div class="content-block">
+            <p><a href="#" class="confirm-ok">噜啦啦</a></p>
+            <p><a href="#" class="confirm-ok-cancel">张一山</a></p>
+            <p><a href="#" class="confirm-title-ok">Lay</a></p>
+            <p><a href="#" class="confirm-title-ok-cancel">shihun</a></p>
+        </div>
+    </div>
+</body>
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script>
+    $(document).on('click','.confirm-ok',function(){
+        $.confirm('噜啦啦',function(){
+            $.alert('You clicked 确定按钮');
+        });
+    });
+    $(document).on('click','.confirm-ok-cancel',function(){
+        $.confirm('你确定',function(){
+            $.alert('嗯嗯');
+        },
+        function(){
+            $.alert('是滴');
+        });
+    });
+    $(document).on('click','.confirm-title-ok',function(){
+        $confirm('是他吗?','sure',function(){
+            $.alert('就是他');
+        });
+    });
+    $(document).on('click','.confirm-title-ok-cancel',function(){
+       $.confirm('确定','是他',function(){
+          $.alert('你选的是ok按钮');
+       },
+       function(){
+        $.alert('不是他');
+       });
+    });
+</script>
+</html>

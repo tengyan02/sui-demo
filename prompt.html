@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prompt model对话框</title>
+    <link rel="shortcut icon" href="http://favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+</head>
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">prompt</h1>
+    </header>
+    <div class="content">
+        <div class="content-block">
+            <p><a href="#" class="prompt-ok">we never really grow up</a></p>
+            <p><a href="#" class="prompt-ok-cancel">we only learn</a></p>
+            <p><a href="#" class="prompt-title-ok">how to act in public</a></p>
+            <p><a href="#" class="prompt-title-ok-cancel">Bryan White</a></p>
+        </div>
+    </div>
+    
+</body>
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script>
+    $(document).on('click','.prompt-ok',function(){
+       $.prompt('What is your name?',function(value){
+           $.alert('Your name is'+value+'Your clicked OK button');
+       })
+    });
+    $(document).on('click','.prompt-ok-cancel',function(){
+        $.prompt('What is your name?',function(value){
+           $.alert('Your name is'+value+'Your clicked OK button');
+       },function(value){
+           $.alert('Your name is'+value+'Your clicked cancel button');
+       });
+    });
+    $(document).on('click','.prompt-title-ok',function(){
+        $.prompt('What is your name?', 'Custom Title', function (value) {
+          $.alert('Your name is "' + value + '". You clicked Ok button');
+      });
+    });
+    $(document).on('click', '.prompt-title-ok-cancel',function () {
+      $.prompt('What is your name?', 'Custom Title',
+        function (value) {
+          $.alert('Your name is "' + value + '". You clicked Ok button');
+        },
+        function (value) {
+          $.alert('Your name is "' + value + '". You clicked Cancel button');
+        }
+      );
+  });
+</script>
+</html>

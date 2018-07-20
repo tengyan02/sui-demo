@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>popup事件</title>
+    <link rel="shortcut icon" href="http://favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+</head>
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">popup事件</h1>
+    </header>
+    <div class="content">
+        <div class="content-block">
+            <p><a href="#" data-popup=".popup-about" class="open-popup">Open about popup</a></p>
+            <p><a href="#" ddta-popup=".popup-services" class="open-popup">Open Services Popup</a></p>
+        </div>
+    </div>
+    <!--About popup-->
+    <div class="popup popup-about">
+        <div class="content-block">
+           <p>About</p>
+           <p><a href="#" class="close-popup">Close popup</a></p>
+           <p>Lorem ipsum dolor</p>
+        </div>
+    </div>
+    <!--Services popup-->
+    <div class="popup popup-services">
+        <div class="content-block">
+           <p>services</p>
+           <p><a href="#" class="close-popup">close popup</a></p>
+           <p>Lore ipsum dolor</p>
+        </div>
+    </div>
+</body>
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script>
+    $(document).on('click','popup-about',function(){
+        console.log('About popup opend')
+    });
+    $(document).on('click','popup-about',function(){
+       console.log('About popup closing')
+    });
+    $(document).on('click','popuo-services',function(){
+        console.log('Services popup is opening')
+    });
+    $(document).on('click','popup-services',function(){
+        console.log('Services popup is closed')
+    });
+</script>
+</html>

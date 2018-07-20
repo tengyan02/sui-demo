@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex标签页</title>
+    <link rel="shortcut icon" href="http://favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+</head>
+<script>
+    $(document).on("pageInit",function(){
+        $('.buttons-tab').fixedTab({offset:44});
+    });
+</script>
+<body>
+    <p>标签页滚动到顶部后固定在顶部，通过fixed-tab</p>
+    <header>
+        <h2 class="title">flex标签页</h2>
+    </header>
+    <div class="content">
+        <p>其他内容区域</p>
+        <p>其他内容区域</p>
+        <p>其他内容区域</p>
+        <p>其他内容区域</p>
+        <div class="button-tab fixed-tab" data-offset="44">
+            <a></a>
+
+        </div>
+        <div class="tabs">
+        <div id="tab1" class="tab active">
+            <div class="content-block">
+                <div class="buttons-row">
+                    <a href="#tab1-1" class="tab-link active button">Tab 1</a>
+                    <a href="#tab1-2" class="tab-link button">Tab 2</a>
+                    <a href="#tab1-3" class="tab-link button">Tab 3</a>
+                </div>
+                <div class="tabs">
+                  <p class="tab active" id="tab1-1" style="height: 600px">
+                      This is tab1 content
+                  </p>
+                  <p class="tab" id="tab1-2">
+                        This is tab1-2 content
+                 </p>
+                 <p class="tab" id="tab1-3">
+                        This is tab1-3 content
+                 </p>
+                </div>
+            </div>
+        </div>
+        <div id="tab2" class="tab">
+            <div class="content-block">
+             <p style="height: 600px;">This is tab2 content start</p>
+             <p>This is tab2 content end</p>
+            </div>
+        </div>
+        <div id="tab3" class="tab">
+          <div class="content-block">
+            <p style="height: 600px">This is tab 3 content strat</p>
+            <p>This is tab3 content end</p>
+          </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+</html>
